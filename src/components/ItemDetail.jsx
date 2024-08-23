@@ -15,7 +15,8 @@ export default function ItemDetail( {item} ) {
   }
 
   const handleSumar = () => {
-    cantidad < item.stock && setCantidad(cantidad + 1);
+    setCantidad(cantidad + 1);
+    // {/*cantidad < item.stock &&*/} 
   }
 
 

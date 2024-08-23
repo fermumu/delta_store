@@ -69,3 +69,18 @@
 .overlay.active {
   display: block;
 }
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;  /* Ajusta el tamaño del contenedor circular */
+  height: 100px; /* Ajusta el tamaño del contenedor circular */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  background-color: #f0f0f0; /* Color de fondo del círculo */
+}
+
+.profile-icon {
+  font-size: 48px; /* Ajusta el tamaño del ícono */
+  color: #333; /* Color del ícono */
+}

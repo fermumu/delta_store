@@ -60,3 +60,14 @@ table{
 .text-table {
     text-align: center;
 }
+
+.img-table {
+    display: flex;
+    justify-content: center; 
+}
+
+.img-table img {
+    max-height: 150px; 
+    max-width: 150px;   
+    object-fit: cover; 
+}

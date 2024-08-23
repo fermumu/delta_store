@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './AdminProducts.css';
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../firebase/config/config';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function AdminProducts() {
 
   const [getProduto, setGetProducto] = useState([])
+
+  const navigate = useNavigate();
 
   const getProducts = () => {
 
@@ -30,12 +34,16 @@ export default function AdminProducts() {
     getProducts();
   },[]);
 
+  const handleClick = () => {
+    navigate('/createProducts');
+  }
+
   return (
     <div>
       <div className='product-conatiner'>
         <h1 className='title-product'>Administrador de productos</h1>
-        <button className='button-product'>
-          Crear Producto
+        <button className='button-product' onClick={handleClick}>
+          Nuevo Producto
         </button>
       </div>
       <div className="table-product">
@@ -58,21 +66,12 @@ export default function AdminProducts() {
                   <td className='text-table'>{pro.categoria}</td>
                   <td className='text-table'>{pro.descripcion}</td>
                   <td className='text-table'>$ {pro.precio}</td>
-                  <td className='text-table'> <img src={pro.imagen} alt={pro.titulo}/> </td>
+                  <td className='img-table'> <img src={pro.imagen} alt={pro.titulo}/> </td>
                   <td className='text-table'>Editar - Eliminar</td>
                 </tr>
               ))
             }
-            
-              
-              
-              
-              
-              
-              
-              
-            
-          </tbody>
+          </tbody> 
         </table>
       </div>
     </div>

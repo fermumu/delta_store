@@ -13,6 +13,7 @@ import FavoritosPage from './components/FavoritosPage';
 import Home from './components/Home';
 import AdminProducts from './components/AdminProducts';
 import AdminPedidos from './components/AdminPedidos';
+import CreateProducts from './components/CreateProducts';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/checkout' element={<Checkout/>}/>
             <Route path='/adminProducts' element={<AdminProducts/>}/>
             <Route path='/adminPedidos' element={<AdminPedidos/>}/>
+            <Route path='/createProducts' element={<CreateProducts/>}/>
           </Routes>
         </BrowserRouter>
       </CartProvider>

@@ -1,0 +1,41 @@
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.title-head {
+    background-color: #f2f2f2;
+  }
+  
+  .title-table {
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  td h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .product-img {
+    width:60px; 
+    height: auto;
+    margin-top: 5px; 
+    display: block;
+  }
+  
+  td {
+    padding: 10px;
+    vertical-align: top;
+    
+  }
+
+  .prod-cart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  

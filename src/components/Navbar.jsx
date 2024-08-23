@@ -15,10 +15,10 @@ export default function Navbar() {
         <li className='productos-menu'>
           <Link className='menu-link' to='/productos'>Productos</Link>
           <ul className='submenu'>
-            <li><Link to='/productos/medias'>Medias</Link></li>
-            <li><Link to='/productos/pantalones'>Pantalones</Link></li>
-            <li><Link to='/productos/remeras'>Remeras</Link></li>
-            <li><Link to='/productos/buzos'>Buzos</Link></li>
+            <li><Link to='/productos/grandes'>Grandes</Link></li>
+            <li><Link to='/productos/medianos'>Medianos</Link></li>
+            <li><Link to='/productos/pequeños'>Pequeños</Link></li>
+            <li><Link to='/productos/accesorios'>Accesorios</Link></li>
           </ul>
         </li>
         <li><Link className='menu-link' to='/nosotros'> Nosotros </Link></li>

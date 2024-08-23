@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Items( {productos} ) {
   return (
     <div className='producto'>
-      <img src={productos.imagen} alt={productos.titulo}/>
+      <img className='producto-img' src={productos.imagen} alt={productos.titulo}/>
       <div>
         <h4>{productos.titulo}</h4>
         <p>Precio: {productos.precio}</p>

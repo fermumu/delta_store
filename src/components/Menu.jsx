@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -39,7 +39,9 @@ export default function Menu() {
       </div>
       <div className={`sidebar ${isOpen ? 'open' : ''}`} ref={menuRef}>
         <div className="sidebar-content">
-          <h2>Menú</h2>
+          <div className="profile">
+            <FontAwesomeIcon icon={faUser} className='profile-icon'/>
+          </div>
           <ul>
             <li>
               <Link 
@@ -57,6 +59,15 @@ export default function Menu() {
                 onClick={() => handleLinkClick('/adminPedidos')}
               >
                 Pedidos
+              </Link>
+            </li>
+            <li>
+            <Link 
+                to="/adminPedidos" 
+                className="nav-link"
+                onClick={() => handleLinkClick('/adminPedidos')}
+              >
+                Promociones
               </Link>
             </li>
           </ul>

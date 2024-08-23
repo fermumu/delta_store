@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../contex/CartContext'
+import React, { useContext } from 'react';
+import { CartContext } from '../contex/CartContext';
 import { Link } from 'react-router-dom';
+import './Carrito.css';
 
 export default function Carrito() {
 
@@ -12,19 +13,37 @@ export default function Carrito() {
 
   return (
     <div className='container'>
-      <h1 className='main-title'>Carrito</h1>
-      {
-        carrito.map((prod)=>(
-          <div key={prod.id}>
-            <br/>
-            <h2>{prod.titulo}</h2>
-            <p>Precio unitario: $ {prod.precio}</p>
-            <p>Precio total: $ {prod.precio * prod.cantidad}</p>
-            <p>Cantidad: {prod.cantidad}</p>
-            <br/>
-          </div>
-        ))
-      }
+      <div className="title">
+        <h1 className='main-title'>Carrito de Compras</h1>
+      </div>
+      <table>
+        <thead className='title-head'>
+          <tr>
+            <th className='title-table'>Producto</th>
+            <th className='title-table'>Precio</th>
+            <th className='title-table'>Cantidad</th>
+            <th className='title-table'>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {carrito.map((prod) => (
+            <tr key={prod.id}>
+              <td>
+                <div className="prod-cart">
+                  <h2>{prod.titulo}</h2>
+                  <img className="product-img" src={prod.imagen} alt={prod.titulo} />
+                </div>
+              </td>
+              <td>$ {prod.precio}</td>
+              <td>{prod.cantidad}</td>
+              <td>$ {prod.precio * prod.cantidad}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <br />
+      
       {  
         carrito.length > 0 ?
         <>
