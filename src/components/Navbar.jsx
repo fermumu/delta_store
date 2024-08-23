@@ -2,17 +2,14 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Favoritos from './Favoritos';
+import Menu from './Menu';
 
 
 export default function Navbar() {
   return (
     <nav className='navbar'>
-      <Link to='/' className='logo'>
-      <FontAwesomeIcon icon={faBars} size="2x" />
-      </Link>
+      <Menu/>
       <ul className='menu'>
         <li><Link className='menu-link' to='/'> Inicio </Link></li>
         <li className='productos-menu'>

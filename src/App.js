@@ -11,6 +11,8 @@ import Checkout from './components/Checkout';
 
 import FavoritosPage from './components/FavoritosPage';
 import Home from './components/Home';
+import AdminProducts from './components/AdminProducts';
+import AdminPedidos from './components/AdminPedidos';
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
             <Route path='/carrito' element={<Carrito/>}/>
             <Route path='/favoritos' element={<FavoritosPage/>}/>
             <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='/adminProducts' element={<AdminProducts/>}/>
+            <Route path='/adminPedidos' element={<AdminPedidos/>}/>
           </Routes>
         </BrowserRouter>
       </CartProvider>
